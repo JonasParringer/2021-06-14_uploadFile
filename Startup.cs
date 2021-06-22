@@ -34,9 +34,7 @@ namespace _2021_06_14_uploadFile
             //options.UseLazyLoadingProxies().UseSqlServer(uploadFileContext);
             //options.UseSqlServer().UseLazyLoadingProxies();
 
-            services.AddDbContextPool<uploadFileContext>(options =>
- options.UseLazyLoadingProxies()
- .UseSqlServer(configuration.GetConnectionString("uploadFileContext"));
+            services.AddDbContextPool<uploadFileContext>(options => options.UseLazyLoadingProxies().UseSqlServer(configuration.GetConnectionString("uploadFileContext"));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
